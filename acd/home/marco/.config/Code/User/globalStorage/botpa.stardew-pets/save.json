@@ -1,0 +1,51 @@
+{
+    "money": 380,
+    "pets": [
+        {
+            "specie": "Cow",
+            "name": "Tommy",
+            "color": "White Adult"
+        },
+        {
+            "specie": "Cow",
+            "name": "Cayetana",
+            "color": "White Adult"
+        },
+        {
+            "specie": "Cow",
+            "name": "Noah",
+            "color": "White Adult"
+        },
+        {
+            "specie": "Cow",
+            "name": "Martinez",
+            "color": "Brown Adult"
+        },
+        {
+            "specie": "Chicken",
+            "name": "Jorge",
+            "color": "White Adult"
+        },
+        {
+            "specie": "Chicken",
+            "name": "Misterioso",
+            "color": "White Adult"
+        },
+        {
+            "specie": "Chicken",
+            "name": "Nacho-san",
+            "color": "White Adult"
+        },
+        {
+            "specie": "Chicken",
+            "name": "Julian",
+            "color": "White Adult"
+        },
+        {
+            "specie": "Goat",
+            "name": "Pedrito",
+            "color": "Adult"
+        }
+    ],
+    "decoration": []
+}
