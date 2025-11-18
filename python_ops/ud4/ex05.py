@@ -8,14 +8,14 @@ movidos de lista correctamente.
 """
 
 sent_messages = []
+lista = ["email John", "buy flowers", "complete tutorial", "buy food"]
 
-def send_messages(text):
-    print(text)
-    sent_messages.append(text)
+def send_messages():
+    while len(lista) > 0:
+        print(lista[0])
+        sent_messages.append(lista[0])
+        lista.remove(lista[0])
+    print(lista)
+    print(sent_messages)
 
-def show_messages():
-    lista = ["email John", "buy flowers", "complete tutorial", "buy food"]
-    for text in lista:
-        print(text)
-
-show_messages()
+send_messages()

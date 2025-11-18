@@ -7,28 +7,12 @@ mensaje diferente.
 """
 
 
-def make_shirt(size):
-    if size == "XS":
-        print("T-Shirt XS made")
-    elif size == "S":
-        print("T-Shirt S made")
-    elif size == "M":
-        print("I love Python!")
-    elif size == "L":
-        print("I love Python!")
-    elif size == "XL":
-        print("T-Shirt XL made")
-    elif size == "XXL":
-        print("T-Shirt XXL made")
+def make_shirt(size, text):
+    print(f"Size: {size}")
+    if (size == "L" or size == "M"):
+        print("Message: I love Python!")
     else:
-        print("Bad size")
-
-def main():
-    while True:
-        size = input("Enter a size T-Shirt (XS, S, M, L, XL, XXL) or exit for exit: ")
-        if size == "exit":
-            return
-        make_shirt(size=size)
-
-if __name__ == '__main__':
-    main()
+        print(f"Message: {text}")
+    
+make_shirt("S", "Macarrones con barbarcoa")
+make_shirt(size="L", text="Huevo sin sal")
