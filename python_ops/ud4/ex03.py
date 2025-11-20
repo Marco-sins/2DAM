@@ -6,9 +6,9 @@ Llama a tu función con tres ciudades diferentes, al menos una que no sea el pai
 defecto.
 """
 
-def describe_city(city, country):
+def describe_city(city, country="Spain"):
     print(f"{city} is in {country}")
 
 describe_city("Barcelona", "Spain")
 describe_city("Reykjavik", "Island")
-describe_city("Madrid", "Spain")
+describe_city("Madrid")
