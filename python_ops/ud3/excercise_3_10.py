@@ -5,3 +5,12 @@ else you’d like. Write a program that creates a list containing these items an
 then uses each function introduced in this chapter at least once.
 """
 
+ciudades = ["Tokyo", "Paris", "New York", "London", "Sydney"]
+print("Lista original de ciudades:")
+print(ciudades)
+print()
+print("Lista de ciudades en orden alfabético (sin modificar la lista original):")
+print(sorted(ciudades))
+print()
+print("Lista original de ciudades (para confirmar que no ha cambiado):")
+print(ciudades)
