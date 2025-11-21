@@ -7,7 +7,7 @@ try:
     
     while True:
         num = input("Ingresa un numero entre 1 y 10: ")
-        client_socket.sendall(num.encode("utf-8"))
+        client_socket.sendall(num.encode())
         data = client_socket.recv(1024)
         b = int(data.decode())
         if (b == 0):

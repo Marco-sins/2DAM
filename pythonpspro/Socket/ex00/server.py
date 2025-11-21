@@ -1,17 +1,29 @@
 import socket
 import random
+import threading
 
-server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-random_num = random.randint(1, 10)
 
-try:
-    server_socket.bind(("0.0.0.0", 8082))
-    server_socket.listen(5)
 
-    print("Servidor conectado en 0.0.0.0:8082...")
-    conn, addr = server_socket.accept()
-    print(f"Conectado con {addr}")
 
+def conexion():
+    try:
+        server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        server_socket.bind(("0.0.0.0", 8082))
+        server_socket.listen(5)
+        print("Servidor conectado en 0.0.0.0:8082...")
+
+        while True:
+            conn, addr = server_socket.accept()
+            print(f"Conectado con {addr}")
+            hilo = threading.Thread(target=game, args=(conn, addr))
+            hilo.start()
+    except socket.error as e:
+        print(e)
+    finally:
+        server_socket.close()
+
+def game(conn, addr):
+    random_num = random.randint(1, 10)
     while True:
         print("Ingresa un numero del 1 al 10: ")
         data = conn.recv(1024)
@@ -26,7 +38,5 @@ try:
         else:
             print("El numero es menor")
             conn.sendall(b"-1")
-except socket.error as e:
-    print(f"Excepcion de socket: {e}")
-finally:
-    server_socket.close()
+
+conexion()

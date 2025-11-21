@@ -22,7 +22,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
         <mysql.version>8.3.0</mysql.version>
         <sqlite.version>3.45.3.0</sqlite.version>
         <jpa.version>3.1.0</jpa.version>
-        <slf4j.version>2.0.12</slf4j.version>
+        <slf4j.version>2.0.12</slf4j.version>https://i.redd.it/5lfhwthcpk2g1.png
     </properties>
 
     <dependencies>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Configuración de conexión a la base de datos -->
+        <property name="hibernate.connection.driver_class">
+            org.sqlite.JDBC
+        </property>
+        <property name="hibernate.connection.url">
+            jdbc:sqlite:/home/marco/Escritorio/2DAM/acd/game-vault/src/main/resources/videojuegos.db
+        </property>
+        
+        <!-- Dialecto de la base de datos -->
+        <property name="hibernate.dialect">
+            org.hibernate.community.dialect.SQLiteDialect
+        </property>
+        
+        <!-- MUY IMPORTANTE: Generación automática del esquema -->
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        
+        <!-- Mostrar SQL en consola -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        
+        <!-- Mapeo de entidades -->
+        <mapping class="es.dam.gamevault.models.Usuario"/>
+        <mapping class="es.dam.gamevault.models.Videojuego"/>
+        <mapping class="es.dam.gamevault.models.Prestamo"/>
+    </session-factory>
+</hibernate-configuration>
