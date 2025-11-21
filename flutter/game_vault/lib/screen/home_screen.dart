@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:game_vault/%20widgets/app_drawer.dart';
+import 'package:game_vault/ widgets/games_grid.dart';
+import 'package:game_vault/ widgets/categories_list.dart';
+import 'package:game_vault/ widgets/add_game_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -32,13 +35,25 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
         ),
+        floatingActionButton: FloatingActionButton
+        (
+          child: const Icon(Icons.add),
+          onPressed: () async 
+          {
+            final resultado = await Navigator.push
+            (
+              context, 
+              MaterialPageRoute(builder: (_) => const AddGameScreen())
+            );
+          },
+        ),
         body: TabBarView
         (
           children: 
           [
-            const Center(child: Text('Aquí irán los juegos')),
+            const GamesGrid(),
             const Center(child: Text('Aquí irán los favoritos')),
-            const Center(child: Text('Aquí irán las categorías')),
+            const CategoriesList()
           ],
         ),
         drawer: AppDrawer(),
