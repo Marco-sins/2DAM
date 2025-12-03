@@ -5,13 +5,14 @@ import time
 evento = threading.Event()
 
 class ladron(threading.Thread):
-    def __init__(self):
+    def __init__(self, nombre):
         super().__init__()
+        self.nombre = nombre
 
     def run(self):
         while not evento.is_set():
             time.sleep(0.5)
-            print("Estoy robando en un chino")
+            print(f"Soy {self.nombre}, Estoy robando en un chino")
         
         print("Ya no robo. Me han pillado en un chino")
     
@@ -25,7 +26,7 @@ class polisia(threading.Thread):
 
 
 
-elLadron = ladron()
+elLadron = ladron("Nacho")
 elLadron.start()
 
 time.sleep(2)
