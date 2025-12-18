@@ -1,4 +1,7 @@
-es/dam/streamingcatalog/model/Critica.class
+es/dam/streamingcatalog/repository/EstudioRepository.class
 es/dam/streamingcatalog/Main.class
 es/dam/streamingcatalog/model/Estudio.class
 es/dam/streamingcatalog/model/Pelicula.class
+es/dam/streamingcatalog/repository/CriticaRepository.class
+es/dam/streamingcatalog/model/Critica.class
+es/dam/streamingcatalog/repository/PeliculaRepository.class

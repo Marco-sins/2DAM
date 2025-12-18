@@ -1,4 +1,7 @@
 /home/marco/Desktop/2DAM/acd/catalogo-streaming/src/main/java/es/dam/streamingcatalog/model/Critica.java
 /home/marco/Desktop/2DAM/acd/catalogo-streaming/src/main/java/es/dam/streamingcatalog/Main.java
+/home/marco/Desktop/2DAM/acd/catalogo-streaming/src/main/java/es/dam/streamingcatalog/repository/CriticaRepository.java
 /home/marco/Desktop/2DAM/acd/catalogo-streaming/src/main/java/es/dam/streamingcatalog/model/Pelicula.java
+/home/marco/Desktop/2DAM/acd/catalogo-streaming/src/main/java/es/dam/streamingcatalog/repository/EstudioRepository.java
+/home/marco/Desktop/2DAM/acd/catalogo-streaming/src/main/java/es/dam/streamingcatalog/repository/PeliculaRepository.java
 /home/marco/Desktop/2DAM/acd/catalogo-streaming/src/main/java/es/dam/streamingcatalog/model/Estudio.java
