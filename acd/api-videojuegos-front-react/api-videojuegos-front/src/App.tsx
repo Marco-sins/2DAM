@@ -1,18 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './styles/App.css'
-import { CardVideojuego } from './components/CardVideojuego'
+import { Home } from './pages/Home'
+import { AñadirVideojuego } from './pages/AñadirVideojuego'
+import { DetallesVideojuego } from './pages/DetallesVideojuego'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        {CardVideojuego()}
-      </div>
-    </>
+    <Router> {/* Router envuelve toda la app */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/crear-videojuego" element={<AñadirVideojuego />} />
+        <Route path="/detalle-videojuego/:id" element={<DetallesVideojuego />} />
+      </Routes>
+    </Router>
   )
 }
 

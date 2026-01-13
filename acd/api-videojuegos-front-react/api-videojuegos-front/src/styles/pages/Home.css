@@ -1,0 +1,16 @@
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 80%;
+}
+
+
+
+.videojuegos-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* columnas adaptables */
+  gap: 16px; /* espacio entre cards */
+}

@@ -1,16 +1,16 @@
 import type { Videojuego } from "../models/Videojuego";
-import '../styles/CardVideojuego.css';
+import '../styles/components/CardVideojuegos.css';
 
 interface CardVideojuegoProps {
     videojuego: Videojuego;
 }
 
-export const CardVideojuego = ({videojuego}: CardVideojuegoProps) => {
+export const CardVideojuego = ({videojuego, onClick}: {videojuego: Videojuego, onClick: () => void}) => {
     return (
-        <div className="card-videojuego">
+        <div className="card-videojuego" onClick={onClick}>
             <h2>{videojuego.titulo}</h2>
             <p>Género: {videojuego.genero}</p>
-            <p>Precio: ${videojuego.precio.toFixed(2)}</p>
+            <p>Precio: {videojuego.precio} €</p>
         </div>
     );
 }
