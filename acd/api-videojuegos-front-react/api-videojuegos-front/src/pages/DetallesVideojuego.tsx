@@ -5,7 +5,8 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 
 export const DetallesVideojuego = () => {
-    const id = Number(useParams());
+    const idParam = useParams();
+    const id = Number(idParam.id);
     const navigate = useNavigate();
     const { deleteVideojuego, getVideojuegoById, videojuegos } = useVideojuegos();
 
@@ -28,7 +29,10 @@ export const DetallesVideojuego = () => {
     return (
         <div className="detalles-videojuego">
             <h1>{videojuegos[0]?.titulo}</h1>
-
+            <p>Género: {videojuegos[0]?.genero}</p>
+            <p>Precio: {videojuegos[0]?.precio}</p>
+            <Button onClick={(handleBack)} value="Back" className="button" id="aceptar"/>
+            <Button onClick={(handleDelete)} value="Delete" className="button" id="cancelar"/>
         </div>
     );
 }

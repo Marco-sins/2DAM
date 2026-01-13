@@ -16,6 +16,7 @@ export const getAll = async () => {
 
 export const getById = async (id: number) => {
     const response = await fetch(`http://localhost:8080/videojuegos/${id}`);
+    console.log(id)
     return response.json();
 }
 
