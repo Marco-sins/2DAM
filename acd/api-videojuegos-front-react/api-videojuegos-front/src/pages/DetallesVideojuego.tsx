@@ -9,6 +9,7 @@ export const DetallesVideojuego = () => {
     const id = Number(idParam.id);
     const navigate = useNavigate();
     const { deleteVideojuego, getVideojuegoById, videojuegos } = useVideojuegos();
+    
 
     const handleDelete = async () => {
         await deleteVideojuego(id);

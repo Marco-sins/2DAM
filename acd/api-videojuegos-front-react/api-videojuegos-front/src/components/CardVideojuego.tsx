@@ -1,10 +1,6 @@
 import type { Videojuego } from "../models/Videojuego";
 import '../styles/components/CardVideojuegos.css';
 
-interface CardVideojuegoProps {
-    videojuego: Videojuego;
-}
-
 export const CardVideojuego = ({videojuego, onClick}: {videojuego: Videojuego, onClick: () => void}) => {
     return (
         <div className="card-videojuego" onClick={onClick}>
